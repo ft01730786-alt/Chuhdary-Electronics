@@ -1,0 +1,22 @@
+{
+  "name": "chaudhry-electric-solar-store",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "art": "node scripts/generate-product-art.mjs",
+    "images": "node scripts/optimize-images.mjs"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "vite": "latest"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.4"
+  }
+}
