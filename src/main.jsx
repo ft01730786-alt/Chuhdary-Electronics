@@ -1,5 +1,6 @@
 import React, { lazy, Suspense, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
+import { injectSpeedInsights } from '@vercel/speed-insights';
 import './styles.css';
 import { SITE_NAME, PHONE, routes } from './data';
 import { go, usePath, wa, setMeta } from './ui';
@@ -53,4 +54,5 @@ function Header({ page }) {
 
 function Footer() { return <footer><div className="footer-main"><div className="brand foot"><img src="/logo.svg" alt="" width="50" height="50"/><span><b>CHAUDHRY</b><small>ELECTRIC &amp; SOLAR SYSTEMS STORE</small></span></div><div><b>Explore</b><a href="/products" onClick={e => { e.preventDefault(); go('/products'); }}>Products</a><a href="/services" onClick={e => { e.preventDefault(); go('/services'); }}>Services</a><a href="/about" onClick={e => { e.preventDefault(); go('/about'); }}>About</a></div><div><b>Contact</b><a href="tel:+923002269170">{PHONE}</a><span>Burewala Road, 68 Mod</span><span>Punjab, Pakistan</span></div></div><div className="footer-bottom">© {new Date().getFullYear()} {SITE_NAME} · Quality • Trust • Better Life</div></footer>; }
 
+injectSpeedInsights();
 createRoot(document.getElementById('root')).render(<App />);
